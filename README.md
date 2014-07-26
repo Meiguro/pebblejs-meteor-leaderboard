@@ -1,12 +1,12 @@
 # Leaderboard using Meteor + Pebble.js
 
-A Pebble.js example companion app for the Meteor leaderboard example.
+A [Pebble.js] example companion app for the [Meteor] leaderboard example.
 
 ## Getting Started
 
 1. [Create a meteor leaderboard example](https://www.meteor.com/examples/leaderboard)
 
-1. Create a Pebble.js leaderboard example using [CloudPebble]:
+1. Create a [Pebble.js] leaderboard example using [CloudPebble]:
 
   1. Visit [CloudPebble] and Sign In or Sign Up.
   1. In the [Projects tab](https://cloudpebble.net/ide/), press Import at the top right.
@@ -21,6 +21,9 @@ A Pebble.js example companion app for the Meteor leaderboard example.
 
 1. Under the compilation, select your phone and hit "Install and Run". The demo should now load on your watch.
 
-1. Vote your favorite scientist by pressing select and start hacking!
+1. Vote your favorite scientist by pressing select and start hacking! Check out the [Pebble.js Documentation] for more information.
 
+[Meteor]:http://meteor.com
 [CloudPebble]:https://cloudpebble.net/ide/
+[Pebble.js]:http://pebble.github.io/pebblejs
+[Pebble.js Documentation]:http://pebble.github.io/pebblejs
