@@ -1,0 +1,19 @@
+{
+  "uuid": "c67609f2-6482-44ae-8067-9247cb5f55de",
+  "shortName": "Leaderboard",
+  "longName": "Meteor Leaderboard",
+  "companyName": "MakeAwesomeHappen",
+  "projectType": "pebblejs",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "capabilities": [
+    "configurable"
+  ],
+  "appKeys": {},
+  "resources": {
+    "media": []
+  }
+}
