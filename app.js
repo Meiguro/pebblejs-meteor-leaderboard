@@ -22,15 +22,9 @@ var App = {};
 
 App.init = function() {
   App.players = [];
+  App.playerItems = [];
 
   App.homeMenu = new UI.Menu();
-
-  App.homeMenu.on('select', function(e) {
-    var player = App.players[e.item];
-    if (player) {
-      Player.update(player._id, { $inc: { score: 5 } });
-    }
-  });
 
   App.homeMenu.section(0, {
     title: 'Leaderboard',
@@ -48,19 +42,17 @@ App.init = function() {
 
 App.getPlayers = function() {
   var cursor = Player.find({}, { sort: { score: -1, name: 1 } });
-  var players = cursor.fetch();
-  App.players = players;
 
-  var items = App.playerItems || (App.playerItems = []);
-  items.length = cursor.count();
+  App.playerItems.length = cursor.count();
 
-  players.forEach(function(player, i) {
-    var item = items[i] || (items[i] = {});
+  App.players = cursor.fetch();
+  App.players.forEach(function(player, i) {
+    var item = App.playerItems[i] || (App.playerItems[i] = {});
     item.title = player.score + ' ' + player.name;
   });
 
   App.homeMenu.selection(function() {
-    App.homeMenu.items(0, items);
+    App.homeMenu.items(0, App.playerItems);
   });
 };
 
@@ -69,3 +61,11 @@ Settings.config(
 );
 
 App.init();
+
+App.homeMenu.on('select', function(e) {
+  var player = App.players[e.item];
+  if (player) {
+    Player.update(player._id, { $inc: { score: 5 } });
+  }
+});
+
