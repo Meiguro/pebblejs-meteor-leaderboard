@@ -6,7 +6,6 @@
  * @license MIT
  */
 
-var ajax = require('ajax');
 var UI = require('ui');
 var Settings = require('settings');
 
