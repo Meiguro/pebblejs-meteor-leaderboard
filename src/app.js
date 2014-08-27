@@ -62,7 +62,7 @@ Settings.config(
 App.init();
 
 App.homeMenu.on('select', function(e) {
-  var player = App.players[e.item];
+  var player = App.players[e.itemIndex];
   if (player) {
     Player.update(player._id, { $inc: { score: 5 } });
   }
